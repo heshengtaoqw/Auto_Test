@@ -1,8 +1,8 @@
 package com.hst.util;
 
 /*
- ÔÚ±àĞ´ÍêÆô¶¯ä¯ÀÀÆ÷µÄÏà¹Ø´úÂëºó£¬ÎÒÃÇÔÙ±àĞ´»ù´¡Àà£¬µ±ÓĞ²âÊÔÀàÒªÖ´ĞĞÊ±¾ÍÒª¼Ì³ĞÕâ¸ö»ù´¡Àà£¬¼Ì³ĞËüµÄÁ½¸ö·½·¨¡£
- Õâ¸öÀàµÄÖ÷Òª¹¦ÄÜ¾ÍÊÇÔÚÖ´ĞĞTestSuiteÖ®Ç°ÒªÏÈ´ò¿ªÏà¹ØµÄä¯ÀÀÆ÷£¬È»ºó½øĞĞÏà¹Ø²âÊÔ£¬Ö´ĞĞÍêTestSuiteµÄ²âÊÔÓÃÀıÖ®ºó£¬ÎÒÃÇÒª¹Ø±Õä¯ÀÀÆ÷¡£¾ßÌå´úÂëÈçÏÂ£º
+ ï¿½Ú±ï¿½Ğ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù±ï¿½Ğ´ï¿½ï¿½ï¿½ï¿½ï¿½à£¬ï¿½ï¿½ï¿½Ğ²ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÖ´ï¿½ï¿½Ê±ï¿½ï¿½Òªï¿½Ì³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½à£¬ï¿½Ì³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ü¾ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½TestSuiteÖ®Ç°Òªï¿½È´ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø²ï¿½ï¿½Ô£ï¿½Ö´ï¿½ï¿½ï¿½ï¿½TestSuiteï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â£ï¿½
  */
 
 import java.io.BufferedReader;
@@ -28,7 +28,7 @@ public class BaseTest {
 	public static WebDriver driver;
 	
 	
-	@BeforeSuite
+	@BeforeSuite //BeforeSuiteï¼šåœ¨æ•´ä¸ªæµ‹è¯•é›†è¿è¡Œä¹‹å‰è¿è¡Œï¼›
 	public void start() throws Exception {
 		try {
 			driver = useBrowser.startFirefox(URL);
@@ -38,9 +38,9 @@ public class BaseTest {
 		}
 	}
 	
-	@DataProvider(name = "login")   //ÎÄ¼şÃû
+	@DataProvider(name = "login")   //ï¿½Ä¼ï¿½ï¿½ï¿½
     public Object[][] dp() throws Exception {
-        return readCSV("D:\\login1.txt");    //ÎÄ¼şµÄÂ·¾¶
+        return readCSV("D:\\login1.txt");    //ï¿½Ä¼ï¿½ï¿½ï¿½Â·ï¿½ï¿½
     }
 	
 	public static Object[][] readCSV(String fileName) throws Exception
@@ -48,16 +48,16 @@ public class BaseTest {
 		 List<Object[]> records = new ArrayList<Object[]>();
 	        String record;
 	        BufferedReader file = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), "UTF-8"));
-	        file.readLine();                           //ºöÂÔµÚÒ»ĞĞ
-	        while ((record=file.readLine())!=null){        //±éÀú¶ÁÈ¡ÎÄ¼şÖĞ³ıµÚÒ»ĞĞÒÔÍâµÄËùÓĞĞĞµÄÄÚÈİ
-	            String fields[] =  record.split(",");  //´æ´¢ÔÚÃûÎªrecordsµÄArrayListÖĞ
-	            records.add(fields);                    //Ã¿Ò»¸örecodsÖĞ´æ´¢µÄ¶ÔÏóÎªÒ»¸öStringÊı×é
+	        file.readLine();                           //ï¿½ï¿½ï¿½Ôµï¿½Ò»ï¿½ï¿½
+	        while ((record=file.readLine())!=null){        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½Ä¼ï¿½ï¿½Ğ³ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğµï¿½ï¿½ï¿½ï¿½ï¿½
+	            String fields[] =  record.split(",");  //ï¿½æ´¢ï¿½ï¿½ï¿½ï¿½Îªrecordsï¿½ï¿½ArrayListï¿½ï¿½
+	            records.add(fields);                    //Ã¿Ò»ï¿½ï¿½recodsï¿½Ğ´æ´¢ï¿½Ä¶ï¿½ï¿½ï¿½ÎªÒ»ï¿½ï¿½Stringï¿½ï¿½ï¿½ï¿½
 	        }
-	        file.close();  //¹Ø±ÕÎÄ¼ş¶ÔÏó
+	        file.close();  //ï¿½Ø±ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½
 
-	        Object[][] results = new Object[records.size()][]; //¶¨Òåº¯Êı·µ»ØÖµ£¬¼´Object[][]
-	        for (int i=0; i<records.size();i++){            //½«´æ´¢²âÊÔÊı¾İµÄList×ª»»ÎªÒ»¸öÈËObjectµÄ¶şÎ¬Êı×é
-	            results[i] = records.get(i);               //ÉèÖÃ¶şÎ¬Êı×éÃ¿ĞĞµÄÖµ£¬Ã¿ĞĞÊÇÒ»¸öObject¶ÔÏó
+	        Object[][] results = new Object[records.size()][]; //ï¿½ï¿½ï¿½åº¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Object[][]
+	        for (int i=0; i<records.size();i++){            //ï¿½ï¿½ï¿½æ´¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İµï¿½List×ªï¿½ï¿½ÎªÒ»ï¿½ï¿½ï¿½ï¿½Objectï¿½Ä¶ï¿½Î¬ï¿½ï¿½ï¿½ï¿½
+	            results[i] = records.get(i);               //ï¿½ï¿½ï¿½Ã¶ï¿½Î¬ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½Ğµï¿½Öµï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Objectï¿½ï¿½ï¿½ï¿½
 	        }
 	        return results;
 

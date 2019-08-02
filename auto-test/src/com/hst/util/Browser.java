@@ -10,22 +10,21 @@ import org.testng.annotations.Test;
 public class Browser {
 	
   public static WebDriver driver;
-  String url = "www.baidu.com";
   
-  @BeforeTest
+  @BeforeTest //BeforeTestï¼šåœ¨æµ‹è¯•é›†ä¸­çš„æ¯ä¸ªTestä¹‹å‰è¿è¡Œ
 	public WebDriver startFirefox(String url) throws Exception {
 	  	try{
-		//Ä¬ÈÏÖ§³Ö»ğºüä¯ÀÀÆ÷£¬ÄÜ¹»Õı³£´ò¿ª£¬Èô²»ÄÜ´ò¿ª»ğºü£¬Ôò°ÑÏÂÃæµÄ»ğºüµÄÇı¶¯·Å¿ª
+		//Ä¬ï¿½ï¿½Ö§ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ò¿ª£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü´ò¿ª»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¿ï¿½
 		//System.setProperty("webdriver.firefox.marionette","D:\\workspace\\tests\\src\\driver\\geckodriver.exe");
 			driver = new FirefoxDriver();	
 			driver.get(url);
-			System.out.println("³É¹¦´ò¿ª»ğºüä¯ÀÀÆ÷£¡");
+			System.out.println("ï¿½É¹ï¿½ï¿½ò¿ª»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			Thread.sleep(2000);
 		} 
 		catch (Exception e) {
-			System.out.println("´ò¿ª»ğºüä¯ÀÀÆ÷Ê±³ö´íÁË"+e);
+			System.out.println("ï¿½ò¿ª»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"+e);
 		}
 			return driver;
   	}
@@ -34,10 +33,10 @@ public class Browser {
 		try {
 			Thread.sleep(2000);
 			driver.close();
-			System.out.println("³É¹¦¹Ø±Õä¯ÀÀÆ÷£¡");
+			System.out.println("ï¿½É¹ï¿½ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 		} 
 		catch (Exception e) {
-			System.out.println("¹Ø±Õä¯ÀÀÆ÷Ê±³ö´íÁË"+e);
+			System.out.println("ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"+e);
 		}
 	}
 }

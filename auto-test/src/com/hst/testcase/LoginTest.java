@@ -12,15 +12,15 @@ import com.hst.util.*;
 public class LoginTest extends BaseTest{
 
 	LoginPage loginPage = new LoginPage();
-	String LoginURL = "http://10.31.0.55/login";
+	String LoginURL = "http://10.31.0.56/login";
 	String username = null;
 	String password = null;
 
-	//²âÊÔÓÃÀı1£ºÕËºÅÃÜÂëÕıÈ·
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·
 	@Test(dataProvider = "login")
 	public void loginTest1(String testName, String username, String password) throws Exception{
 		driver.get(LoginURL);
-		System.out.println("²âÊÔÓÃÀı1"+ testName);
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1"+ testName);
 		System.out.printf("Thread Id : %s%n",Thread.currentThread().getId());
 		
 		try {
@@ -36,12 +36,12 @@ public class LoginTest extends BaseTest{
 		Thread.sleep(2000);
 	}
 	
-	//²âÊÔÓÃÀı2£ºÕËºÅ¼°ÃÜÂë²»ÕıÈ·
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½2ï¿½ï¿½ï¿½ËºÅ¼ï¿½ï¿½ï¿½ï¿½ë²»ï¿½ï¿½È·
 	@Parameters({"testName","username","password"})
 	@Test
 	public void loginTest2(String testName, String username, String password) throws Exception{
 		driver.get(LoginURL);
-		System.out.println("²âÊÔÓÃÀı2"+ testName);
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½2"+ testName);
 		System.out.printf("Thread Id : %s%n",Thread.currentThread().getId());
 		
 		try {

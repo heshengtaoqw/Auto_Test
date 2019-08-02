@@ -11,44 +11,44 @@ public class LoginPage {
 	private String name = "j_username";
 	private String pwd = "j_password";
 	private String submit = "Submit";
-	private String loginErrorPage = "http://10.31.0.55/loginError";
+	private String loginErrorPage = "http://10.31.0.56/loginError";
 								
 
-	//µÇÂ¼·½·¨
+	//ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
 	
 	public void login(WebDriver driver, String username, String password) throws Exception {
 
-		System.out.println("ÓÃ»§ÃûÎª: " + username + ", ÃÜÂëÎª: " + password );
+		System.out.println("ï¿½Ã»ï¿½ï¿½ï¿½Îª: " + username + ", ï¿½ï¿½ï¿½ï¿½Îª: " + password );
 		driver.findElement(By.name(name)).sendKeys(username);
 		driver.findElement(By.name(pwd)).sendKeys(password);
 		
-		// µã»÷µÇÂ¼
+		// ï¿½ï¿½ï¿½ï¿½ï¿½Â¼
 		Thread.sleep(2000);
 		driver.findElement(By.name(submit)).click();
-		//driver.findElement(By.xpath("//span[contains(text(),'µÇÂ¼')]")).click();
+		//driver.findElement(By.xpath("//span[contains(text(),'ï¿½ï¿½Â¼')]")).click();
 		// System.out.println(driver.getCurrentUrl());
 	}
 
  
-	//ÅÐ¶ÏÊÇ·ñµÇÂ¼³É¹¦
+	//ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½Â¼ï¿½É¹ï¿½
 	public boolean isLoginSuccess(WebDriver driver) throws Exception{
 		
 		boolean flag = false;
 		try {
 			
 			if(driver.getCurrentUrl().equals(loginErrorPage)){
-				System.out.println("µÇÂ¼Ê§°Ü");
+				System.out.println("ï¿½ï¿½Â¼Ê§ï¿½ï¿½");
 				flag=false;
 				return flag;
 			}
-			else if(driver.findElement(By.linkText("ÐÂ½¨ÈÎÎñ")).isDisplayed())
+			else if(driver.findElement(By.linkText("ï¿½Â½ï¿½ï¿½ï¿½ï¿½ï¿½")).isDisplayed())
 			{	
-				System.out.println("µÇÂ¼³É¹¦");
+				System.out.println("ï¿½ï¿½Â¼ï¿½É¹ï¿½");
 				flag = true;
 				return flag;
 			}
 			else{
-				System.out.println("µÇÂ¼Ò³ÃæÒì³£");
+				System.out.println("ï¿½ï¿½Â¼Ò³ï¿½ï¿½ï¿½ì³£");
 				flag=false;
 				return flag;
 			}
@@ -88,7 +88,7 @@ boolean flag = false;
 
 try {
 
-if (driver.findElement(By.id(forLogin)).getAttribute("value").equals("µÇÂ¼")) {
+if (driver.findElement(By.id(forLogin)).getAttribute("value").equals("ï¿½ï¿½Â¼")) {
 
 flag = true;
 

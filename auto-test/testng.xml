@@ -11,6 +11,7 @@
     </classes>
   </test> <!-- Test -->
   
+  <!--  
   <test thread-count="5" name="Test2">	
     <classes>
       <class name="com.hst.testcase.LoginTest"/>
@@ -22,5 +23,5 @@
 		</methods> 
     </classes>
   </test> 
-  
+  -->
 </suite> <!-- Suite -->
