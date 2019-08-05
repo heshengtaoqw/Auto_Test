@@ -5,6 +5,29 @@ import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.testng.Reporter;
 import org.testng.annotations.Parameters;
+import com.hst.pageElement.*;
+
+/*
+public class HomePageObject extends PageElementPath{    
+    // 点击搜索栏
+    public void click_Search_Bar(WebDriver driver){
+        driver.findElement(By.id(search_bar_id)).click();
+    }        
+    // 搜索框输入
+    public void input_Search_Box(WebDriver driver,String key_word){        
+        driver.findElement(By.id(search_box_id)).clear();
+        driver.findElement(By.id(search_box_id)).sendKeys(key_word);
+        System.out.println("百度输入框已经成功输入的搜索内容:"+key_word);        
+    }    
+    //点击搜索按钮(百度一下)
+    public void click_Search_Button(WebDriver driver){            
+        driver.findElement(By.name(search_button_name)).click();
+        System.out.println("click the 百度以下,success...");    
+    }
+}
+*/
+
+
 
 public class LoginPage {
 
@@ -15,6 +38,7 @@ public class LoginPage {
 								
 
 	//��¼����
+	
 	
 	public void login(WebDriver driver, String username, String password) throws Exception {
 
